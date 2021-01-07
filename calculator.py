@@ -15,7 +15,10 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # Call the subtract function passing in the aguments same as for add function
     # Otherwise if tokens at index 0 is '*'
     # Call the multiply function passing in the same arguments as add function
-
+    # Otherwise if tokens at index 0 is '/'
+    # Call the divide function passing in the same arguments as in add
+    # Otherwise if tokens at index 0 is 'square'
+    # Call the square function, passing in only tokens at index 1
     
 while True:
     input_string = input("Enter equation:  ")
@@ -29,4 +32,7 @@ while True:
         print(subtract(float(tokens[1]), float(tokens[2])))
     elif tokens[0] == '*':
         print(multiply(float(tokens[1]), float(tokens[2])))
-                
+    elif tokens[0] == '/':
+        print(divide(float(tokens[1]), float(tokens[2])))
+    elif tokens[0] == 'square':
+        print(square(float(tokens[1])))            
