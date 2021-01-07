@@ -19,6 +19,10 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # Call the divide function passing in the same arguments as in add
     # Otherwise if tokens at index 0 is 'square'
     # Call the square function, passing in only tokens at index 1
+    # Otherwise if tokens at index 0 is 'cube'
+    # Call the cube funcion, passing in only tokens at index 1
+    # Otherwise if tokens at index 0 is 'pow'
+    # Call the power function, passing in tokens at index 1 and 2
     
 while True:
     input_string = input("Enter equation:  ")
@@ -35,4 +39,8 @@ while True:
     elif tokens[0] == '/':
         print(divide(float(tokens[1]), float(tokens[2])))
     elif tokens[0] == 'square':
-        print(square(float(tokens[1])))            
+        print(square(float(tokens[1])))  
+    elif tokens[0] == 'cube':
+        print(cube(float(tokens[1])))
+    elif tokens[0] == 'pow':
+        print(power(float(tokens[1]),float(tokens[2])))       
