@@ -11,7 +11,9 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # If input_string is 'q', break
     # If tokens at index 0 is '+'
     # Call the add function passing in the arguments, integers of tokens[1],[2]
-    
+    # Else if tokens at index 0 is '-'
+    # Call the subtract function passing in the aguments same as for add function
+
     
 while True:
     input_string = input("Enter equation:  ")
@@ -21,3 +23,6 @@ while True:
         break
     if tokens[0] == '+':
         print(add(float(tokens[1]), float(tokens[2])))
+    elif tokens[0] == '-':
+        print(subtract(float(tokens[1]), float(tokens[2])))
+            
