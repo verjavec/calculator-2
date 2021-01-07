@@ -23,7 +23,8 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # Call the cube funcion, passing in only tokens at index 1
     # Otherwise if tokens at index 0 is 'pow'
     # Call the power function, passing in tokens at index 1 and 2
-    
+    # Otherwise if tokens at index 0 is 'mod', 
+    # Call the mod function, passing in tokens at index 1 and 2
 while True:
     input_string = input("Enter equation:  ")
     tokens = input_string.split(' ')
@@ -43,4 +44,6 @@ while True:
     elif tokens[0] == 'cube':
         print(cube(float(tokens[1])))
     elif tokens[0] == 'pow':
-        print(power(float(tokens[1]),float(tokens[2])))       
+        print(power(float(tokens[1]),float(tokens[2]))) 
+    elif tokens[0] == 'mod':
+        print(mod(float(tokens[1]), float(tokens[2])))      
