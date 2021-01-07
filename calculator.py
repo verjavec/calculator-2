@@ -13,6 +13,8 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # Call the add function passing in the arguments, integers of tokens[1],[2]
     # Else if tokens at index 0 is '-'
     # Call the subtract function passing in the aguments same as for add function
+    # Otherwise if tokens at index 0 is '*'
+    # Call the multiply function passing in the same arguments as add function
 
     
 while True:
@@ -25,4 +27,6 @@ while True:
         print(add(float(tokens[1]), float(tokens[2])))
     elif tokens[0] == '-':
         print(subtract(float(tokens[1]), float(tokens[2])))
-            
+    elif tokens[0] == '*':
+        print(multiply(float(tokens[1]), float(tokens[2])))
+                
