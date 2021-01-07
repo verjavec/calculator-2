@@ -25,10 +25,12 @@ from arithmetic import (add, subtract, multiply, divide, square, cube,
     # Call the power function, passing in tokens at index 1 and 2
     # Otherwise if tokens at index 0 is 'mod', 
     # Call the mod function, passing in tokens at index 1 and 2
+    # Otherwise print invalid equation, try again
 while True:
     input_string = input("Enter equation:  ")
     tokens = input_string.split(' ')
-    
+    num1 = float(tokens[1])
+    num2 = float(tokens[2])
     if input_string == 'q':
         break
     if tokens[0] == '+':
@@ -46,4 +48,6 @@ while True:
     elif tokens[0] == 'pow':
         print(power(float(tokens[1]),float(tokens[2]))) 
     elif tokens[0] == 'mod':
-        print(mod(float(tokens[1]), float(tokens[2])))      
+        print(mod(float(tokens[1]), float(tokens[2])))
+    else:
+        print("Invalid input. Please enter a new equation.")
